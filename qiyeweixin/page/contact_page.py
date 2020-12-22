@@ -33,6 +33,7 @@ class ContactPage(BasePage):
         return AddDepartment(self.driver)
 
     def get_department(self):
+        self.driver.refresh()
         time.sleep(2)
         get_department = self.driver.find_elements_by_xpath('//div//a[@class="jstree-anchor"]')
         department_list = []
