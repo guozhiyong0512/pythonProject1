@@ -30,7 +30,7 @@ class TestWeiXin():
                 self.driver.add_cookie(cookie)
         self.driver.get("https://work.weixin.qq.com/wework_admin/frame#index")
         self.driver.find_element_by_xpath('//div//a[@id="menu_contacts"]').click()
-        time.sleep(1)
+        time.sleep(2)
         self.driver.find_element_by_xpath(
             '//div[@class="ww_operationBar"]//a[@class="qui_btn ww_btn js_add_member"]').click()
         self.driver.find_element_by_id("username").send_keys("老白")
