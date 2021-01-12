@@ -1,0 +1,50 @@
+{
+  "name": "test_search",
+  "status": "passed",
+  "attachments": [
+    {
+      "source": "cb067bcf-0591-48aa-bb2c-39d10534d9e6-attachment.png",
+      "type": "image/png"
+    }
+  ],
+  "start": 1610415370910,
+  "stop": 1610415391043,
+  "uuid": "55163b50-7a73-4a56-937a-72e4b7408b4f",
+  "historyId": "46a90bacc9f465e955c350ffd7c3549f",
+  "testCaseId": "accf4eda06847cb106ce28f6ac154674",
+  "fullName": "test_frame.testcase.test_search.TestSearch#test_search",
+  "labels": [
+    {
+      "name": "parentSuite",
+      "value": "test_frame.testcase"
+    },
+    {
+      "name": "suite",
+      "value": "test_search"
+    },
+    {
+      "name": "subSuite",
+      "value": "TestSearch"
+    },
+    {
+      "name": "host",
+      "value": "jsb-guozhiyong"
+    },
+    {
+      "name": "thread",
+      "value": "836-MainThread"
+    },
+    {
+      "name": "framework",
+      "value": "pytest"
+    },
+    {
+      "name": "language",
+      "value": "cpython3"
+    },
+    {
+      "name": "package",
+      "value": "test_frame.testcase.test_search"
+    }
+  ]
+}

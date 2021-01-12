@@ -8,3 +8,4 @@ class TestSearch():
 
     def test_search(self):
         self.app.goto_main().goto_market().goto_search().search()
+

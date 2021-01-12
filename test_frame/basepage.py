@@ -1,3 +1,4 @@
+import yaml
 from appium.webdriver.common.mobileby import MobileBy
 from appium.webdriver.webdriver import WebDriver
 from selenium.webdriver.common.by import By
@@ -7,6 +8,11 @@ from test_frame.black_handle import black_wrapper
 
 
 class BasePage():
+    FIND = "find"
+    ACTION = "action"
+    FIND_AND_CLICK = "find_and_click"
+    SEND = "send"
+    CONTENT = "content"
 
     def __init__(self, driver: WebDriver = None):
         self.driver = driver
@@ -50,3 +56,19 @@ class BasePage():
             return len(eles) > 0
 
         WebDriverWait(self.driver, 10).until(wait_ele_for)
+
+    def load(self, yaml_path):
+        with open(yaml_path, encoding="utf8") as f:
+            data = yaml.load(f)
+        for step in data:
+            xpath = step.get(self.FIND)
+            action = step.get(self.ACTION)
+            content = step.get(self.CONTENT)
+            if action == self.FIND_AND_CLICK:
+                self.find_and_click(By.XPATH, xpath)
+
+            elif action == self.SEND:
+                self.find_send_keys(By.XPATH, xpath, content)
+
+    def sceenshot(self, picture_path):
+        self.driver.save_screenshot(picture_path)
